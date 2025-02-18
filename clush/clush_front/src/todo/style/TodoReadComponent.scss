@@ -1,0 +1,97 @@
+.todo-read-container {
+  max-width: 600px;
+  width: 88%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1002;
+
+  .todo-read-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+
+  .todo-read-content,
+  .todo-read-author,
+  .todo-read-start,
+  .todo-read-end,
+  .todo-read-priority,
+  .todo-read-status {
+    font-size: 16px;
+    color: #555;
+    strong {
+      font-weight: bold;
+      color: #222;
+    }
+  }
+
+  .todo-read-button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .todo-read-modify-button {
+      background: #333;
+      color: white;
+      &:hover {
+        background: #0056b3;
+      }
+    }
+
+    .todo-read-delete-button {
+      background: #dc3545;
+      color: white;
+      &:hover {
+        background: #b02a37;
+      }
+    }
+
+    .todo-read-close-button {
+      background: #6c757d;
+      color: white;
+      &:hover {
+        background: #5a6268;
+      }
+    }
+  }
+}
+
+/* 📌 반응형 디자인 */
+@media (max-width: 768px) {
+  .todo-read-container {
+    width: 90%;
+    padding: 20px;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .todo-read-button-group button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+}

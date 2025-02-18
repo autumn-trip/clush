@@ -1,0 +1,104 @@
+.todo-register-container {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .todo-register-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+
+  .todo-register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .todo-register-form-group {
+      width: 95%;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // 📌 좌측 정렬
+
+      .todo-register-form-label {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+        text-align: left;
+      }
+
+      .todo-register-form-input,
+      .todo-register-form-textarea,
+      .todo-register-form-select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .todo-register-form-textarea {
+        height: 100px;
+        resize: none;
+      }
+    }
+
+    .todo-register-button-group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      .todo-register-submit-button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+/* 📌 반응형 디자인 */
+@media (max-width: 768px) {
+  .todo-register-container {
+    width: 90%;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .todo-register-form {
+    .todo-register-form-group {
+      .todo-register-form-input,
+      .todo-register-form-textarea,
+      .todo-register-form-select {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .todo-register-button-group {
+    .todo-register-submit-button {
+      width: 100%;
+    }
+  }
+}

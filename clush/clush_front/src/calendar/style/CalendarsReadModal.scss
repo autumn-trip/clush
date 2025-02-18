@@ -1,0 +1,138 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 500px; // 기본 크기 설정
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    strong {
+      font-weight: bold;
+      color: #222;
+    }
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    button:first-child {
+      background: #333;
+      color: white;
+      &:hover {
+        background: #0056b3;
+      }
+    }
+
+    .delete-button {
+      background: #dc3545;
+      color: white;
+      &:hover {
+        background: #b02a37;
+      }
+    }
+  }
+
+  .close-button {
+    background: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #5a6268;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+    h3 {
+      font-size: 18px;
+    }
+    p, label {
+      font-size: 14px;
+    }
+    input, select, textarea {
+      font-size: 12px;
+    }
+    .modal-buttons button {
+      font-size: 12px;
+      padding: 8px;
+    }
+    .close-button {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+}

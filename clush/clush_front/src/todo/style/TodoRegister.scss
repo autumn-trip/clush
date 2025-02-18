@@ -1,0 +1,98 @@
+.todo-register-container {
+  max-width: 800px;
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .register-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // 추가: 좌측 정렬
+
+    .form-label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+      text-align: left; // 추가: 텍스트 좌측 정렬
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form-textarea {
+      height: 100px;
+      resize: none;
+    }
+  }
+
+  .button-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .add-button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+/* 📌 반응형 디자인 */
+@media (max-width: 768px) {
+  .todo-register-container {
+    width: 90%;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .form-group {
+    align-items: flex-start; // 추가: 모바일에서도 좌측 정렬 유지
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      font-size: 14px;
+    }
+  }
+
+  .button-group {
+    .add-button {
+      width: 100%;
+    }
+  }
+}
